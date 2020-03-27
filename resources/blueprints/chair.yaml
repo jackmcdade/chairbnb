@@ -1,0 +1,182 @@
+title: Chair
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: photo
+        field:
+          container: assets
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          localizable: false
+          listable: hidden
+          display: Photo
+      -
+        handle: overview
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          localizable: false
+          listable: hidden
+          display: Overview
+      -
+        handle: description
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          localizable: false
+          listable: hidden
+          display: Description
+      -
+        handle: price
+        field:
+          input_type: text
+          prepend: $
+          type: text
+          instructions: 'Price per night, in USD'
+          localizable: false
+          listable: hidden
+          display: Price
+      -
+        handle: chair_type
+        field:
+          options:
+            Bench: null
+            Chair: null
+            Couch: null
+            Hammock: null
+            Stool: null
+            Swing: null
+          clearable: false
+          multiple: false
+          searchable: true
+          taggable: true
+          push_tags: true
+          cast_booleans: false
+          type: select
+          localizable: false
+          listable: hidden
+          display: 'Chair Type'
+      -
+        handle: has_cushion
+        field:
+          options:
+            'yes': 'Yes'
+            'no': 'No'
+          inline: true
+          type: radio
+          instructions: 'Does this seat have a cushion?'
+          localizable: false
+          listable: hidden
+          display: 'Has Cushion'
+      -
+        handle: butts
+        field:
+          type: integer
+          instructions: 'The number of butts this chair can reasonably handle'
+          localizable: false
+          listable: hidden
+          display: Butts
+      -
+        handle: location
+        field:
+          options:
+            indoors: Indoors
+            outdoors: Outdoors
+          inline: true
+          type: radio
+          localizable: false
+          listable: hidden
+          display: Location
+      -
+        handle: amenities
+        field:
+          fields:
+            -
+              handle: amenity
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Amenity
+            -
+              handle: icon
+              field:
+                container: assets
+                mode: grid
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                type: assets
+                localizable: false
+                listable: hidden
+                display: Icon
+                folder: svgs
+            -
+              handle: color
+              field:
+                theme: classic
+                color_modes:
+                  - HEXA
+                default_color_mode: HEXA
+                lock_opacity: false
+                type: color
+                localizable: false
+                listable: hidden
+                display: Color
+          mode: table
+          add_row: 'Add Amenity'
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: Amenities
+      -
+        handle: owner
+        field:
+          max_items: 1
+          mode: select
+          type: users
+          localizable: false
+          listable: hidden
+          display: Owner
+      -
+        handle: superchair
+        field:
+          type: toggle
+          instructions: 'For the very specialist of chairs'
+          localizable: false
+          listable: hidden
+          display: Superchair
+  location:
+    display: Location
+    fields:
+      -
+        handle: city
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: City
+      -
+        handle: country
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: Country

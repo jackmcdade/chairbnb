@@ -1,0 +1,12 @@
+title: Chairs
+template: chairs/show
+layout: layout
+blueprints:
+  - chair
+revisions: false
+route: '/chairs/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
