@@ -18,7 +18,7 @@
         </div>
         <div class="flex mt-4 text-base text-gray-700 border-b pb-4 mb-8">
             <div class="mr-6">{{ butts }} butt{{ if butts > 1 }}s{{ /if }}</div>
-            <div class="mr-6">{{ chair_type }}</div>
+            <div class="mr-6">{{ chair_type:label }}</div>
             <div class="mr-6">{{ has_cushion ? "Has Cushion" : "No Cushion" }}</div>
             <div class="mr-6">{{ location:label }}</div>
         </div>
@@ -31,7 +31,7 @@
             <div class="flex flex-wrap">
             {{ amenities }}
                 <div class="w-1/2 flex items-center mt-6">
-                    {{ svg :src="icon" class="mr-2 h-6 w-6" style="color: {{ color }}" }} {{ amenity }}
+                    {{ svg :src="icon" class="mr-2 h-6 w-6" }} {{ amenity }}
                 </div>
             {{ /amenities }}
             </div>

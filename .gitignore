@@ -6,6 +6,7 @@
 /storage/glide/*
 /users/*
 /storage/*.key
+/storage/statamic/*
 /vendor
 /.idea
 /.vscode

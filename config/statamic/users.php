@@ -46,6 +46,6 @@ return [
     |
     */
 
-    'avatars' => 'initials',
+    'avatars' => 'gravatar',
 
 ];
