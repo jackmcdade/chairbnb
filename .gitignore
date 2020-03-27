@@ -4,7 +4,6 @@
 /public/vendor/statamic
 /storage/users/*
 /storage/glide/*
-/users/*
 /storage/*.key
 /storage/statamic/*
 /vendor

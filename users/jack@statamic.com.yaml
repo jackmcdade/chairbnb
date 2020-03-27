@@ -1,0 +1,17 @@
+name: 'Jack McDade'
+super: true
+id: 44f993ff-37c0-4ab4-b282-db938e274558
+preferences:
+  collections:
+    chairs:
+      columns:
+        - title
+        - photo
+        - price
+        - chair_type
+        - butts
+        - superchair
+  favorites:
+    -
+      name: Chairs
+      url: collections/chairs
