@@ -1,12 +1,13 @@
-<div class="bg-white px-8 flex items-center justify-between border-b">
+<div class="bg-white px-3 md:px-8 flex items-center justify-between border-b">
     <div class="flex items-center flex-1">
-        <a href="/" class="text-xl font-bold mr-8 flex items-center text-red-600">
-            {{ svg src="assets/svgs/chair" class="h-8 w-8 mr-3" }} Chairbnb
+        <a href="/" class="text-xl font-bold mr-4 md:mr-8 flex items-center text-red-600">
+            {{ svg src="assets/svgs/chair" class="h-8 w-8" }}
+            <span class="hidden md:block ml-3">Chairbnb</span>
         </a>
         <input type="search" class="flex-1 border px-4 py-2 text-base rounded max-w-md shadow-sm" placeholder="Search for the perfect chair">
     </div>
     <div class="flex items-center text-sm font-semibold">
-        <a href="/chairs" class="px-2 py-5 ml-8 hover:text-red-600">Chairs</a>
-        <a href="https://github.com/jackmcdade/chairbnb" class="px-2 py-5 ml-8 hover:text-red-600">Github</a>
+        <a href="/chairs" class="px-2 py-5 ml-2 hover:text-red-600">Chairs</a>
+        <a href="https://github.com/jackmcdade/chairbnb" class="hidden md:block px-2 py-5 ml-6 hover:text-red-600">Github</a>
     </div>
 </div>
