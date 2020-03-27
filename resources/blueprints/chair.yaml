@@ -53,12 +53,12 @@ sections:
         handle: chair_type
         field:
           options:
-            Bench: null
-            Chair: null
-            Couch: null
-            Hammock: null
-            Stool: null
-            Swing: null
+            bench: Bench
+            chair: Chair
+            couch: Couch
+            hammock: Hammock
+            stool: Stool
+            swing: Swing
           clearable: false
           multiple: false
           searchable: true
@@ -116,7 +116,7 @@ sections:
               handle: icon
               field:
                 container: assets
-                mode: grid
+                mode: list
                 restrict: true
                 allow_uploads: true
                 max_files: 1
@@ -125,18 +125,6 @@ sections:
                 listable: hidden
                 display: Icon
                 folder: svgs
-            -
-              handle: color
-              field:
-                theme: classic
-                color_modes:
-                  - HEXA
-                default_color_mode: HEXA
-                lock_opacity: false
-                type: color
-                localizable: false
-                listable: hidden
-                display: Color
           mode: table
           add_row: 'Add Amenity'
           reorderable: true
@@ -149,6 +137,7 @@ sections:
         field:
           max_items: 1
           mode: select
+          default: current
           type: users
           localizable: false
           listable: hidden
