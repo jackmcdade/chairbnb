@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5010d2ba402024d6bfcbe1112168de8",
+    "content-hash": "5aab66ca6fdbe87ad89126fbb9cf4073",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3272,6 +3272,47 @@
                 "statamic"
             ],
             "time": "2020-03-26T19:17:16+00:00"
+        },
+        {
+            "name": "statamic/ssg",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/ssg.git",
+                "reference": "3293582a1b8aefcd089c240e6f93aad34a0d8c7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/ssg/zipball/3293582a1b8aefcd089c240e6f93aad34a0d8c7c",
+                "reference": "3293582a1b8aefcd089c240e6f93aad34a0d8c7c",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "3.0.*@beta"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Static Site Generator",
+                    "description": "Static Site Generator addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Statamic\\StaticSite\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\StaticSite\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Static site generator for Statamic 3.",
+            "time": "2020-02-01T03:21:37+00:00"
         },
         {
             "name": "statamic/stringy",
