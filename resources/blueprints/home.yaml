@@ -1,0 +1,69 @@
+title: Home
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: featured_chair
+        field:
+          max_items: 1
+          mode: default
+          collections:
+            - chairs
+          type: entries
+          localizable: false
+          listable: hidden
+          display: 'Featured Chair'
+      -
+        handle: promoted_chair_types
+        field:
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Title
+            -
+              handle: subtitle
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Subtitle
+            -
+              handle: chair_type
+              field:
+                options:
+                  bench: Bench
+                  chair: Chair
+                  couch: Couch
+                  hammock: Hammock
+                  stool: Stool
+                  Swing: null
+                clearable: false
+                multiple: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                type: select
+                localizable: false
+                listable: hidden
+                display: 'Chair Type'
+            -
+              handle: limit
+              field:
+                type: integer
+                localizable: false
+                listable: hidden
+                display: Limit
+          mode: stacked
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: 'Promoted Chair Types'

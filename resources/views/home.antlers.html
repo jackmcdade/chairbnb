@@ -1,3 +1,40 @@
-<div class="text-center pt-16">
-    <p>Have't built a homepage yet. Head over to <a href="/chairs" class="text-red-600 font-bold">Chairs</a> for the good stuff!</p>
+{{ featured_chair }}
+<div class="relative flex -mt-px" style="background: url('{{ glide:photo width="1600" height="900" }}') center center no-repeat; height: 50vh;">
+    <a href="{{ url }}" class="text-white bg-red-600 p-6">
+        <div class="mb-8">
+            <h1 class="font-bold text-5xl">Featured Chair</h1>
+            <h2 class="text-xl font-medium">{{ title }}</h2>
+            <p class="text-red-300">{{ city }}, {{ country }}</p>
+        </div>
+        <div>
+            <div class="text-lg leading-tight text-red-200"><b class="text-white">${{ price }}</b> / night</div>
+        </div>
+    </a>
 </div>
+{{ /featured_chair }}
+
+<div class="max-w-screen-xl px-4 md:px-16 mx-auto mt-16">
+    <header class="mb-8">
+        <h1 class="text-2xl leading-tight mb-1 font-semibold tracking-tight">Check out these amazing chairs!</h1>
+        <p class="text-gray-700">Superchairs are the very best chairs available.</p>
+    </header>
+    <div class="flex flex-wrap -mx-4 pb-16">
+        {{ collection:chairs superchair:is="true" limit="2" }}
+            {{ partial:chairs.card class="w-full md:w-1/2 px-4 mb-8" }}
+        {{ /collection:chairs }}
+    </div>
+</div>
+
+{{ promoted_chair_types }}
+<div class="max-w-screen-xl px-4 md:px-16 mx-auto mt-16">
+    <header class="mb-8">
+        <h1 class="text-2xl leading-tight mb-1 font-semibold tracking-tight">{{ title }}</h1>
+        <p class="text-gray-700">{{ subtitle }}</p>
+    </header>
+    <div class="flex flex-wrap -mx-4 pb-16">
+        {{ collection:chairs chair_type:is="{chair_type}" limit="{limit}" sort="random" }}
+            {{ partial:chairs.card class="w-full md:w-1/{limit} px-4 mb-8" }}
+        {{ /collection:chairs }}
+    </div>
+</div>
+{{ /promoted_chair_types }}

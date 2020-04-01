@@ -5,17 +5,7 @@
     </header>
     <div class="flex flex-wrap -mx-4 pb-16">
         {{ collection:chairs }}
-        <a href="{{ url }}" class="w-full md:w-1/3 px-4 mb-8">
-            <img class="rounded-md mb-4" src="{{ glide:photo width="720" height="480" }}" alt="{{ photo:alt }}" />
-            <div class="flex items-center text-sm text-gray-700 mb-px">
-                {{ if superchair }}
-                    <div class="border border-black rounded-sm uppercase font-medium tracking-widest mr-2 text-xs px-1 text-gray-900">Superchair</div>
-                {{ /if }}
-                <div class="flex-1">{{ city }}, {{ country }}</div>
-            </div>
-            <h3 class="font-medium leading-tight">{{ title }}</h3>
-            <div class="text-base text-gray-700 leading-tight"><b class="text-gray-900">${{ price }}</b> / night</div>
-        </a>
+            {{ partial:chairs.card class="w-full md:w-1/3 px-4 mb-8" }}
         {{ /collection:chairs }}
     </div>
 </div>
